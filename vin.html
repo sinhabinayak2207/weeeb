@@ -2,16 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=0.75">
   <title>Falling For You❤️</title>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
-
-    html {
-      font-size: 75%; /* Adjust root font size to match scaling */
-    }
-
+    
     body {
       height: 100vh;
       display: flex;
@@ -43,8 +38,15 @@
     }
     
     .paper.image {
-      padding: 10px;
-    }
+  padding: 5px; /* Reduced padding around images */
+  max-width: 300px; /* Set a maximum width for the container */
+  max-height: 300px; /* Set a maximum height for the container */
+  overflow: hidden; /* Hide overflow if the image is too large */
+  position: relative; /* Ensure positioning context for absolute positioning if needed */
+}
+
+
+
     
     .paper.image p {
       font-size: 30px;
@@ -52,13 +54,13 @@
     
     img {
       user-select: none;
-      width: 60%;
-      height: 40%;
+      width: 70%;
+      height: 60%;
     }
     
     #img1, #img2, #img3 {
-      width: 60%;
-      height: 40%;
+      width: 70%;
+      height: 60%;
     }
     
     .paper.heart::after {
@@ -126,13 +128,6 @@
 </div>
 
 <script>
-  // JavaScript to manually scale the body for initial zoom
-  document.addEventListener('DOMContentLoaded', () => {
-    document.body.style.transform = 'scale(0.90)';
-    document.body.style.transformOrigin = '0 0'; // Ensures scaling is applied from the top-left corner
-    document.body.style.width = '115.33%'; // Compensate for the scaling to keep content width correct
-  });
-
   let highestZ = 1;
   class Paper {
     holdingPaper = false;
