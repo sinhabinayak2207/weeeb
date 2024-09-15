@@ -22,6 +22,9 @@
       background-position: center center;
       margin: 0;
       overflow: hidden;
+      zoom: 75%; /* Set zoom level to 75% */
+      -moz-transform: scale(0.75); /* Support older Firefox versions */
+      -moz-transform-origin: 0 0;
     }
     
     .paper {
@@ -171,7 +174,7 @@
           this.rotation = degrees;
         }
 
-        if (this.holdingPaper) {
+        if ( this.holdingPaper) {
           if (!this.rotating) {
             this.currentPaperX += this.velX;
             this.currentPaperY += this.velY;
